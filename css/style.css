@@ -99,6 +99,9 @@ p {
     padding: 20px;
     text-align: center;
     background-color: #25EDA5;
+    display: flex; /* Hacemos que los elementos se muestren en línea */
+    justify-content: space-between; /* Distribuimos los elementos a lo largo del contenedor */
+    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
 }
 
 /* Estilos para los párrafos dentro de la sección 2 */
@@ -106,28 +109,26 @@ p {
     text-align: center;
 }
 
-/* Estilos para el contenedor de imágenes dentro de la sección 2 */
+/* Estilos para las filas dentro de la sección 2 */
 .section2-images {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan a la siguiente línea */
 }
 
 /* Estilos para las columnas dentro de la sección 2 */
 .section2-column {
-    flex: 1;
-    margin-right: 10px; /* Espacio entre las columnas */
+    flex-basis: calc(25% - 5px); /* Establecemos el ancho de las columnas al 25% del contenedor con espacio entre ellas */
+    margin-bottom: 0; /* Eliminamos el margen inferior */
+    margin-right: 5px; /* Espacio entre las columnas */
 }
 
 /* Estilos para las imágenes dentro de las columnas de la sección 2 */
 .section2-column img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Establece el ancho al 100% */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
 }
 
-/* Estilos para los párrafos dentro de las columnas de la sección 2 */
-.section2-column p {
-    margin-top: 10px;
-}
 
 /* Estilos para la sección 3 */
 .section3 {
@@ -209,3 +210,107 @@ p {
     margin-right: 100px;
 }
 
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+    /* Estilos para el encabezado */
+    .header h1 {
+        font-size: 40px;
+        margin: 20px;
+    }
+
+    /* Estilos generales para los títulos */
+    h1 {
+        font-size: 30px;
+    }
+
+    /* Estilos generales para los párrafos */
+    p {
+        font-size: 18px;
+    }
+
+    /* Estilos para las columnas dentro de la sección 1 */
+    .section1-column {
+        flex: 1 0 100%; /* Cambio en la flex-basis para que las columnas ocupen toda la anchura */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 20px; /* Agrega un margen inferior entre las columnas */
+    }
+
+    /* Estilos para las imágenes dentro de las columnas de la sección 1 */
+    .section1-column img {
+        width: 100%;
+    }
+
+    /* Estilos para las filas dentro de la sección 2 en dispositivos móviles */
+    .section2-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px; /* Agrega un margen inferior entre las filas */
+    }
+
+    /* Estilos para las columnas dentro de las filas de la sección 2 en dispositivos móviles */
+    .section2-column {
+        flex-basis: 48%; /* Establece el ancho de las columnas al 48% del contenedor */
+        margin-bottom: 20px; /* Agrega un margen inferior entre las columnas */
+        text-align: center; /* Centra el contenido del texto */
+    }
+
+    /* Estilos para las imágenes dentro de las columnas de la sección 2 en dispositivos móviles */
+    .section2-column img {
+        width: 100%; /* Establece el ancho al 100% */
+        height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    }
+
+    /* Estilos para las filas dentro de la sección 2 en dispositivos móviles */
+    .section2-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+ /* Redimensionar la imagen de la sección 3 */
+ .section3-column img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    height: auto;
+}
+
+/* Ajustar el diseño de la sección 3 */
+.section3 {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+}
+
+/* Agregar márgenes a la sección 3 */
+.section3 {
+    margin-bottom: 30px; /* Agrega un margen inferior para separar de la siguiente sección */
+}
+    /* Estilos para las imágenes dentro de la sección 4 */
+    .section4 img {
+        width: calc(50% - 10px); /* Cambio en el ancho de las imágenes para que se vean 2 en una fila */
+        margin-bottom: 20px; /* Agrega un margen inferior entre las imágenes */
+    }
+
+    /* Estilos para el subfooter */
+    .subfooter h1 {
+        font-size: 40px;
+    }
+
+    /* Estilos para el pie de página */
+    .footer {
+        flex-direction: column; /* Cambia la dirección del flex para que los elementos se apilen verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    /* Estilos para las columnas dentro del pie de página */
+    .footercolumn {
+        display: inline-block; /* Cambia a inline-block para que las columnas se muestren una al lado de otra */
+        margin: 10px; /* Ajusta el margen entre las columnas */
+    }
+        /* Establecer márgenes entre secciones */
+        .section1,
+        .section2,
+        .section3,
+        .section4,
+        .subfooter {
+            margin-bottom: 30px;
+        }
+}
