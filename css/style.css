@@ -1,16 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    font-family: 'Exo', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Setting margin and padding for html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting styles for body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Exo', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the body horizontally */
 }
 
+/* Styles for the header */
+header {
+    background-image: url(../img/Header/banner-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for h1 */
 h1 {
     font-size: 2rem;
-    color: #4a86e8;
+    color: #333;
+    text-align: left;
+    margin: 0; /* Remove any default margin */
 }
 
+/* Styles for paragraphs */
 p {
     margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Styles for sections */
+.section1,
+.section2,
+.section3,
+.section4,
+.subfooter {
+    margin-bottom: 20px;
+}
+
+/* Styles for footer */
+footer {
+    text-align: center;
+}
+
+/* Styles for footer columns */
+.footercolumn {
+    display: inline-block;
+    margin-right: 10px;
 }
