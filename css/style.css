@@ -1,70 +1,211 @@
+/* Importa la fuente 'Exo' desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos globales */
 * {
     font-family: 'Exo', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
-/* Setting margin and padding for html and body */
 html, body {
     margin: 0;
     padding: 0;
 }
 
-/* Setting styles for body */
+/* Estilos para el cuerpo de la página */
 body {
     font-family: 'Exo', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    max-width: 800px;
-    margin: 0 auto; /* Center the body horizontally */
+    max-width: 1100px; /* Ancho máximo del cuerpo */
+    margin: 0 auto; /* Centra el cuerpo horizontalmente */
 }
 
-/* Styles for the header */
+/* Estilos para el encabezado */
 header {
     background-image: url(../img/Header/banner-2.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 700px;
+    background-size: cover;
+    height: 400px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Styles for h1 */
-h1 {
-    font-size: 2rem;
-    color: #333;
-    text-align: left;
-    margin: 0; /* Remove any default margin */
+/* Estilos para el título dentro del encabezado */
+.header h1 {
+    font-size: 65px;
+    text-align: center;
+    margin: 70px;
+    padding: 40px;
 }
 
-/* Styles for paragraphs */
+/* Estilos generales para los títulos */
+h1 {
+    font-size: 50px;
+    color: #333;
+    text-align: left;
+    margin: 0;
+}
+
+/* Estilos generales para los párrafos */
 p {
+    font-size: 25px;
     margin-bottom: 20px;
     text-align: left;
 }
 
-/* Styles for sections */
+/* Estilos específicos para los párrafos dentro de la sección 2 */
+.section2 p {
+    font-size: 13px;
+}
+
+/* Estilos para las diferentes secciones de la página */
 .section1,
 .section2,
 .section3,
 .section4,
 .subfooter {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+    padding: 20px; /* Relleno interno de las secciones */
 }
 
-/* Styles for footer */
-footer {
+/* Estilos para la sección 1 */
+.section1 {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para las columnas dentro de la sección 1 */
+.section1-column {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre las columnas */
+}
+
+/* Estilos para las imágenes dentro de las columnas de la sección 1 */
+.section1-column img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la sección 2 */
+.section2 {
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #25EDA5;
+}
+
+/* Estilos para los párrafos dentro de la sección 2 */
+.section2 p {
     text-align: center;
 }
 
-/* Styles for footer columns */
-.footercolumn {
-    display: inline-block;
-    margin-right: 10px;
+/* Estilos para el contenedor de imágenes dentro de la sección 2 */
+.section2-images {
+    display: flex;
+    justify-content: space-between;
 }
+
+/* Estilos para las columnas dentro de la sección 2 */
+.section2-column {
+    flex: 1;
+    margin-right: 10px; /* Espacio entre las columnas */
+}
+
+/* Estilos para las imágenes dentro de las columnas de la sección 2 */
+.section2-column img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para los párrafos dentro de las columnas de la sección 2 */
+.section2-column p {
+    margin-top: 10px;
+}
+
+/* Estilos para la sección 3 */
+.section3 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Estilos para las columnas dentro de la sección 3 */
+.section3-column {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Estilos para las imágenes dentro de las columnas de la sección 3 */
+.section3-column img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la sección 4 */
+.section4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px; /* Ajuste del margen inferior para que esté pegado al subfooter */
+    padding: 20px;
+}
+
+/* Estilos para las imágenes dentro de la sección 4 */
+.section4 img {
+    width: calc(25% - 10px);
+    height: auto;
+    margin: 0; /* Eliminar todos los márgenes */
+    padding: 0; /* Eliminar todo el padding */
+}
+
+/* Estilos para el subfooter */
+.subfooter {
+    background-color: #87ceeb;
+    color: #000;
+    padding: 20px;
+    margin-bottom: -20px; /* Ajuste del margen inferior para que esté pegado a las imágenes */
+    margin-top: -20px; /* Ajuste del margen superior para evitar espacio en blanco */
+}
+
+/* Estilos para el título dentro del subfooter */
+.subfooter h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Estilos para los párrafos dentro del pie de página */
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+/* Estilos para las columnas dentro del pie de página */
+.footercolumn {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para las columnas del programa dentro del pie de página */
+.footercolumn.program {
+    margin-right: 100px;
+}
+
