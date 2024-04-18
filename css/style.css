@@ -63,6 +63,12 @@ p {
 .section2 p {
     font-size: 13px;
 }
+.section2-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Agrega un margen inferior entre las filas */
+}
 
 /* Estilos para las diferentes secciones de la página */
 .section1,
@@ -294,23 +300,22 @@ p {
         font-size: 40px;
     }
 
+/* Estilos para el pie de página en dispositivos móviles */
+@media only screen and (max-width: 767px) {
     /* Estilos para el pie de página */
     .footer {
         flex-direction: column; /* Cambia la dirección del flex para que los elementos se apilen verticalmente */
         align-items: center; /* Centra los elementos horizontalmente */
     }
 
+    /* Estilos para el encabezado del footer */
+    .footer-header {
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-bottom: 0; /* Agrega un margen inferior */
+    }
+
     /* Estilos para las columnas dentro del pie de página */
     .footercolumn {
-        display: inline-block; /* Cambia a inline-block para que las columnas se muestren una al lado de otra */
+        display: inline-block; /* Muestra las columnas una al lado de la otra */
         margin: 10px; /* Ajusta el margen entre las columnas */
     }
-        /* Establecer márgenes entre secciones */
-        .section1,
-        .section2,
-        .section3,
-        .section4,
-        .subfooter {
-            margin-bottom: 30px;
-        }
-}
