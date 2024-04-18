@@ -188,28 +188,40 @@ p {
     background-color: #000;
     color: #fff;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 20px;
+}
+
+/* Estilos para los títulos dentro del pie de página */
+.footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 /* Estilos para los párrafos dentro del pie de página */
 .footer p {
+    font-size: 14px;
     margin: 0;
-    padding: 0;
-    font-size: 12px;
 }
 
 /* Estilos para las columnas dentro del pie de página */
-.footercolumn {
-    display: block;
-    margin-bottom: 10px;
+.footer-columns {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
-/* Estilos específicos para las columnas del programa dentro del pie de página */
+/* Estilos para la columna 'Connect with us' */
+.footercolumn:first-child {
+    margin-left:500px; /* Mueve la columna a la derecha */
+}
+
+/* Estilos para la columna 'Explore' */
+.footercolumn:nth-child(2) {
+    margin-left: auto; /* Mueve la columna a la izquierda */
+}
+
+/* Estilos para la columna 'Our program' */
 .footercolumn.program {
-    margin-right: 100px;
+    margin-right: 40px; /* Agrega un margen a la derecha */
 }
 
 /* Estilos específicos para dispositivos móviles */
@@ -311,4 +323,23 @@ p {
         display: inline-block; /* Muestra las columnas una al lado de la otra */
         margin: 10px; /* Ajusta el margen entre las columnas */
     }
+/* Estilos para las columnas dentro del pie de página */
+.footer-columns p {
+    display: flex;
+    justify-content: left; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en dispositivos móviles */
+    margin: 10px;
+}
+
+/* Estilos para las columnas 'Connect with us' y 'Explore' en dispositivos móviles */
+.footercolumn {
+    width: 50%; /* Establece el ancho de las columnas al 50% del contenedor para que se muestren dos columnas en una fila */
+    margin: 10px; /* Añade un margen entre las columnas */
+}
+
+/* Estilos adicionales para centrar las columnas en dispositivos móviles */
+.footercolumn:first-child,
+.footercolumn:nth-child(2) {
+    margin: 0; /* Reinicia el margen en dispositivos móviles */
+}
 }
