@@ -71,11 +71,7 @@ p {
 }
 
 /* Estilos para las diferentes secciones de la página */
-.section1,
-.section2,
-.section3,
-.section4,
-.subfooter {
+.section1,.section2,.section3,.section4,.subfooter {
     margin-bottom: 20px; /* Espacio entre las secciones */
     padding: 20px; /* Relleno interno de las secciones */
 }
@@ -299,10 +295,6 @@ p {
     .subfooter h1 {
         font-size: 40px;
     }
-
-/* Estilos para el pie de página en dispositivos móviles */
-@media only screen and (max-width: 767px) {
-    /* Estilos para el pie de página */
     .footer {
         flex-direction: column; /* Cambia la dirección del flex para que los elementos se apilen verticalmente */
         align-items: center; /* Centra los elementos horizontalmente */
@@ -319,3 +311,4 @@ p {
         display: inline-block; /* Muestra las columnas una al lado de la otra */
         margin: 10px; /* Ajusta el margen entre las columnas */
     }
+}
